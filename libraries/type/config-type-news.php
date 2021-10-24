@@ -324,10 +324,10 @@
     $config['news'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
     
     /* Hình thức thanh toán */
-    // $nametype = "hinh-thuc-thanh-toan";
-    // $config['news']['hinh-thuc-thanh-toan']['title_main'] = "Hình thức thanh toán";
-    // $config['news']['hinh-thuc-thanh-toan']['check'] = array();
-    // $config['news']['hinh-thuc-thanh-toan']['mota'] = true;
+    $nametype = "hinh-thuc-thanh-toan";
+    $config['news']['hinh-thuc-thanh-toan']['title_main'] = "Hình thức thanh toán";
+    $config['news']['hinh-thuc-thanh-toan']['check'] = array();
+    $config['news']['hinh-thuc-thanh-toan']['mota'] = false;
 
     /* Quản lý mục (Không cấp) */
     if(isset($config['news']))

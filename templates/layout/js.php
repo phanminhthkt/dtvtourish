@@ -54,6 +54,13 @@
                     recaptchaResponseContact.value = token;
                 });
             <?php } ?>
+
+            <?php if($source=='booking-tour') { ?>
+                grecaptcha.execute('<?=$config['googleAPI']['recaptcha']['sitekey']?>', { action: 'booking-tour' }).then(function (token) {
+                    var recaptchaResponseTour = document.getElementById('recaptchaResponseTour');
+                    recaptchaResponseTour.value = token;
+                });
+            <?php } ?>
         });
     </script>
 <?php } ?>

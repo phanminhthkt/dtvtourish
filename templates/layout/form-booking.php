@@ -1,6 +1,6 @@
 <div class="contain-booking">
 	<form class="form-newsletter--in validation-newsletter-in" novalidate method="post" action="booking-form" enctype="multipart/form-data">
-	<h3 class="title-booking">Đặt <?=$title_crumb?></h3>
+	<h3 class="title-booking"><?=dat?> <?=$title_crumb?></h3>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="newsletter-input--in">

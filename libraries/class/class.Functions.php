@@ -258,8 +258,6 @@
 		public function format_money($price=0, $unit='đ', $html=false)
 		{
 			$str = '';
-			if($price)
-			{
 				$str .= number_format($price, 0, ',', '.');
 				if($unit != '')
 				{
@@ -272,7 +270,6 @@
 						$str .= $unit;
 					}
 				}
-			}
 			return $str;
 		}
 		/* Check recaptcha */
@@ -1631,6 +1628,15 @@
 			$str.='</select>';
 			return $str;
 		}
+		public function getOrderTour($id,$sotreem,$songuoilon,$soembe){ 
+			global $lang,$d;
+			$tour = $d->rawQueryOne("select giatreem,gianguoilon,giaembe,chiphikhac,phuthuphongdon from #_product where type=? and id=? limit 0,1",array("tour",$id));
+			$gianguoilon = $tour['gianguoilon'] * $songuoilon;
+			$giaembe = $tour['giaembe'] * $songuoilon;
+			$giatreem = $tour['giatreem'] * $songuoilon;
+			$tonggia = $gianguoilon + $giatreem + $giaembe + $tour['chiphikhac'] + $tour['phuthuphongdon'];
+			return $tonggia;
+		}
 		public function getValueAttribute($id,$column){ 
 			global $lang,$d;
 			$attribute = $d->rawQueryOne("select $column from #_attribute where id='".$id."' limit 0,1");
@@ -1714,7 +1720,7 @@
 			?>
 			<div class="product-all row"> 
 			<?php 	foreach($array as $v){ ?>
-				<div class="<?=$class ? $class : 'col-md-3 col-sm-6'?> col-6">
+				<div class="<?=$class ? $class : 'col-md-3 col-sm-6'?> col-12">
 		            <div class="product transition">
 		                <a href="<?=$v['tenkhongdauvi']?>">
 		                	<div class="product_img">

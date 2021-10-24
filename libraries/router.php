@@ -156,6 +156,26 @@
 			$seo->setSeo('type','object');
 			$title_crumb = lienhe;
 			break;
+		case 'dat-tour':
+			$source = "booking-tour";
+			$template = "booking/tour";
+			$seo->setSeo('type','object');
+			$title_crumb = dattour;
+			break;
+		case 'vnpay-create':
+			$source = "payment_online/vnpay/vnpay_create_payment";
+			break;
+		case 'vnp-ipn':
+			$source = "payment_online/vnpay/vnpay_ipn";
+			break;
+		case 'vnpay-return':
+			$source = "payment_online/vnpay/vnpay_return";
+			$template = "vnpayreturn";
+			break;			
+		case 'order-installment-success':
+			$source = "bill_tragop";
+			$template = "bill_tragop";
+			break;			
 		case 've-may-bay':
 			$source = "static";
 			$template = "static/plane";

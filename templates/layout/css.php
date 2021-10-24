@@ -9,12 +9,12 @@
     $css->setCss("./assets/fancybox3/jquery.fancybox.style.css");
     // $css->setCss("./assets/login/login.css");
     // $css->setCss("./assets/css/cart.css");
-    $css->setCss("./assets/photobox/photobox.css");
-    $css->setCss("./assets/slick/slick.css");
-    $css->setCss("./assets/slick/slick-theme.css");
-    $css->setCss("./assets/slick/slick-style.css");
-    $css->setCss("./assets/simplyscroll/jquery.simplyscroll.css");
-    $css->setCss("./assets/simplyscroll/jquery.simplyscroll-style.css");
+    // $css->setCss("./assets/photobox/photobox.css");
+    // $css->setCss("./assets/slick/slick.css");
+    // $css->setCss("./assets/slick/slick-theme.css");
+    // $css->setCss("./assets/slick/slick-style.css");
+    // $css->setCss("./assets/simplyscroll/jquery.simplyscroll.css");
+    // $css->setCss("./assets/simplyscroll/jquery.simplyscroll-style.css");
     $css->setCss("./assets/fotorama/fotorama.css");
     $css->setCss("./assets/fotorama/fotorama-style.css");
     $css->setCss("./assets/magiczoomplus/magiczoomplus.css");
@@ -22,6 +22,7 @@
     $css->setCss("./assets/owlcarousel2/owl.carousel.css");
     $css->setCss("./assets/owlcarousel2/owl.theme.default.css");
     $css->setCss("./assets/css/style.css");
+    $css->setCss("./assets/css/tour.css");
     $css->setCss("./assets/swiper/swiper.css");
     $css->setCss("./assets/css/responsive.css");
     echo $css->getCss();

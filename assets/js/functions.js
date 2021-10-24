@@ -85,6 +85,26 @@ function goToByScroll(id)
     }, 'slow');
 }
 
+function getTotalOrder($inputName='')
+{
+    var sotreem = $("input[name='treem']").val();
+    var songuoilon = $("input[name='nguoilon']").val();
+    var soembe = $("input[name='embe']").val();
+    var id = $("input[name='idsp']").val();
+    $.ajax({
+        type: "POST",
+        url: "ajax/get_total_order.php",
+        dataType: 'json',
+        data: {sotreem:sotreem,songuoilon:songuoilon,soembe:soembe,id:id},
+        success: function(result){
+            if(result)
+            {
+                $('.total-tour span').html(result.totalText);
+            }
+        }
+    });
+}
+
 function update_cart(id=0,code='',quantity=1)
 {
     if(id)

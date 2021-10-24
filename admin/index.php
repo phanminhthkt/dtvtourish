@@ -31,15 +31,15 @@
 	/* Requick */
 	require_once LIBRARIES."requick.php";
 	
-	// $tour = $d->rawQuery("select * from #_tour");
+	// $tour = $d->rawQuery("select * from #_product_item where type='tour'");
 	// foreach($tour as $v){
-	// 	if($v['ten_en']!=''){
+	// 	$product = $d->rawQueryOne("select * from #_product where type='tour' and tenkhongdauvi = '".$v['tenkhongdauvi']."' limit 1");
+	// 	if(count($product)){
 	// 		$data=[];
-	// 		$data['phuongtienvi'] = $v['ten_en'];
-	// 		$data['phuongtienen'] = $v['ten_en'];
+	// 		$data['tenkhongdauvi'] = $v['tenkhongdauvi'].'-c3';
 	// 		$d->where('id',$v['id']);
 	// 		$d->where('type', 'tour');
-	// 		$d->update('product',$data);
+	// 		$d->update('product_item',$data);
 	// 	}
 	// }
 

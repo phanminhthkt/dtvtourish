@@ -8,6 +8,7 @@
 
     /* Config */
     require_once LIBRARIES."config.php";
+    require_once LIBRARIES."config_vnpay.php";
     require_once LIBRARIES.'autoload.php';
     new AutoLoad();
     $injection = new AntiSQLInjection();

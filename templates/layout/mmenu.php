@@ -1,22 +1,17 @@
 <div class="menu-res hidden-xl">
     <div class="menu-bar-res">
-        <a id="hamburger" href="#menu" title="Menu"><span></span></a>
-        <div class="search-res">
-            <p class="icon-search transition"><i class="fa fa-search"></i></p>
-            <div class="search-grid w-clear">
-                <input type="text" name="keyword2" id="keyword2" placeholder="<?=nhaptukhoatimkiem?>" onkeypress="doEnter(event,'keyword2');"/>
-                <p onclick="onSearch('keyword2');"><i class="fa fa-search"></i></p>
-            </div>
+        
+        <div class="lang-header hidden-xl">
+            <a href="ngon-ngu/vi/"><img src="assets/images/vi.jpg" alt="Tiếng Việt"></a>
+            <a href="ngon-ngu/en/"><img src="assets/images/en.jpg" alt="Tiếng Anh"></a>
         </div>
+        <a id="hamburger" href="#menu" class="ml-1" title="Menu"><span></span></a>
     </div>
     <nav id="menu">
         <ul>
-        <li><a href="trang-chu" title="Trang chủ"><i class="fa fa-home"></i> Trang chủ</a></li>
-        <li><a href="gioi-thieu" title="<?=gioithieu?>"><?=gioithieu?></a></li>
-        <li>
-            <a href="san-pham" title="Sản phẩm">Sản phẩm</a>
+        <li><a href="trang-chu" title="<?=trangchu?>"><?=trangchu?></a></li>
+            <li><a href="gioi-thieu" title="<?=gioithieu?>"><?=gioithieu?></a></li>
             <?php if(count($splistmenu)) { ?>
-                <ul>
                     <?php for($i=0;$i<count($splistmenu); $i++) {
                         $spcatmenu = $d->rawQuery("select ten$lang, tenkhongdauvi, tenkhongdauen, id from #_product_cat where id_list = ? and hienthi > 0 order by stt,id desc",array($splistmenu[$i]['id'])); ?>
                         <li>
@@ -52,13 +47,48 @@
                             <?php } ?>
                         </li>
                     <?php } ?>
-                </ul>
             <?php } ?>
-        </li>
-        <li><a href="tuyen-dung" title="Tuyển dụng">Tuyển dụng</a></li>
-        <li><a href="tin-tuc" title="Tin tức">Tin tức</a></li>
-        <li><a href="tai-lieu" title="Tài liệu">Tài liệu</a></li>
-        <li><a href="lien-he" title="<?=lienhe?>"><?=lienhe?></a></li>
+            <li>
+                <a href="visa" title="<?=dichvuvisa?>"><?=dichvuvisa?></a>
+            </li>
+            <li>
+                <a href="ve-may-bay" title="<?=vemaybay?>"><?=vemaybay?></a>
+            </li>
+            <li>
+                <a title="<?=dichvukhac?>"><?=dichvukhac?></a>
+                <ul>
+                    <li><a href="dich-vu" title="<?=khachsan?>"><?=khachsan?></a>
+                        <?php if(count($dvlistmenu)){ ?>
+                            <ul>
+                                <?php foreach($dvlistmenu as $v){ ?>
+                                    <li><a href="<?=$v[$sluglang]?>"><?=$v['ten'.$lang]?></a></li>
+                                <?php } ?>
+                            </ul>
+                        <?php } ?>
+                    </li>
+                    <li><a href="thue-xe" title="<?=xedulich?>"><?=xedulich?></a></li>
+                    <li><a href="huong-dan-vien" title="<?=huongdanvien?>"><?=huongdanvien?></a>
+                        <?php if(count($hdvlistmenu)){ ?>
+                            <ul>
+                                <?php foreach($hdvlistmenu as $v){ ?>
+                                    <li><a href="<?=$v[$sluglang]?>"><?=$v['ten'.$lang]?></a></li>
+                                <?php } ?>
+                            </ul>
+                        <?php } ?>
+                    </li>
+                    <li><a href="khach-doan" title="<?=dichvukhachdoan?>"><?=dichvukhachdoan?></a>
+                        <?php if(count($kdlistmenu)){ ?>
+                            <ul>
+                                <?php foreach($hdvlistmenu as $v){ ?>
+                                    <li><a href="<?=$v[$sluglang]?>"><?=$v['ten'.$lang]?></a></li>
+                                <?php } ?>
+                            </ul>
+                        <?php } ?>
+                    </li>
+                </ul>
+            </li>
+             <li><a href="tuyen-dung" title="<?=tuyendung?>"><?=tuyendung?></a></li>
+            <li><a href="lien-he" title="<?=lienhe?>"><?=lienhe?></a></li>
     </ul>
     </nav>
 </div>

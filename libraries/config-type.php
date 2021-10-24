@@ -88,6 +88,14 @@
     $config['order']['wordall'] = false;
     $config['order']['thumb'] = '100x100x1';
 
+    $config['booktour']['active'] = true;
+    $config['booktour']['search'] = false;
+    $config['booktour']['excel'] = false;
+    $config['booktour']['word'] = false;
+    $config['booktour']['excelall'] = false;
+    $config['booktour']['wordall'] = false;
+    $config['booktour']['thumb'] = '100x100x1';
+
     /* Quản lý thông báo đẩy */
     $config['onesignal'] = false;
 ?>

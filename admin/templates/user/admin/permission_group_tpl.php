@@ -578,6 +578,30 @@
 	            </div>
 	        </div>
 		<?php } ?>
+		<?php if(isset($config['booktour']['active']) && $config['booktour']['active'] == true) { ?>
+			<div class="card card-permission card-primary card-outline text-sm">
+	            <div class="card-header">
+	                <h3 class="card-title">Quản lý đặt tour</h3>
+	                <div class="card-tools">
+	                	<button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+	                </div>
+	            </div>
+	            <div class="card-body">
+					<div class="custom-control custom-checkbox d-inline-block align-middle mb-2 mr-4 text-md">
+                        <input type="checkbox" class="custom-control-input" name="dataQuyen[]" id="quyen-booktour-view" value="booktour_man" <?=(isset($ds_quyen) && in_array('booktour_man', $ds_quyen))?'checked':'';?>>
+                        <label for="quyen-booktour-view" class="custom-control-label font-weight-normal">Xem danh sách</label>
+                    </div>
+                    <div class="custom-control custom-checkbox d-inline-block align-middle mb-2 mr-4 text-md">
+                        <input type="checkbox" class="custom-control-input" name="dataQuyen[]" id="quyen-booktour-edit" value="booktour_edit" <?=(isset($ds_quyen) && in_array('booktour_edit', $ds_quyen))?'checked':'';?>>
+                        <label for="quyen-booktour-edit" class="custom-control-label font-weight-normal">Chỉnh sửa</label>
+                    </div>
+                    <div class="custom-control custom-checkbox d-inline-block align-middle mb-2 text-md">
+                        <input type="checkbox" class="custom-control-input" name="dataQuyen[]" id="quyen-booktour-delete" value="booktour_delete" <?=(isset($ds_quyen) && in_array('booktour_delete', $ds_quyen))?'checked':'';?>>
+                        <label for="quyen-booktour-delete" class="custom-control-label font-weight-normal">Xóa</label>
+                    </div>
+	            </div>
+	        </div>
+		<?php } ?>
 		<?php if(isset($config['tags'])) { ?>
 			<div class="card card-permission card-primary card-outline text-sm">
 	            <div class="card-header">

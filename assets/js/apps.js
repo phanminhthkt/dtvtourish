@@ -1,6 +1,7 @@
 /* Validation form */
 ValidationFormSelf("validation-newsletter");
 ValidationFormSelf("validation-newsletter-in");
+ValidationFormSelf("validation-booktour");
 ValidationFormSelf("validation-cart");
 ValidationFormSelf("validation-user");
 ValidationFormSelf("validation-contact");
@@ -47,6 +48,18 @@ function afterLoad() {
 
 /* Paging ajax */
 if($(".paging-product").exists())
+{
+    loadPagingAjax("ajax/ajax_product.php?perpage=8",'.paging-product');
+}
+if($("input[name='payments']").exists()){
+    $("input[name='payments']").click(function(){
+        if($(this).val() == 'payment_vnp'){
+            $(this).parents('form.validation-booktour').attr('action', 'vnpay-create');
+        }else{
+            $(this).parents('form.validation-booktour').attr('action', 'dat-tour');
+        }
+    })
+}
 {
     loadPagingAjax("ajax/ajax_product.php?perpage=8",'.paging-product');
 }

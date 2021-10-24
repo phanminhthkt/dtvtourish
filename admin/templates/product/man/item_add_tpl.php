@@ -386,6 +386,17 @@
 	                        <input type="text" class="form-control" name="data[masp]" id="masp" placeholder="Mã tour" value="<?=@$item['masp']?>">
 	                    </div>
 	                <?php } ?>
+	                <?php if(isset($config['product'][$type]['gianguoilon']) && $config['product'][$type]['gianguoilon'] == true) { ?>
+				    	<div class="form-group col-md-4">
+	                        <label class="d-block" for="gianguoilon">Giá người lớn:</label>
+	                        <div class="input-group">
+	                        	<input type="text" class="form-control format-price" name="data[gianguoilon]" id="gianguoilon" placeholder="Giá người lớn" value="<?=@$item['gianguoilon']?>">
+	                        	<div class="input-group-append">
+	                        		<div class="input-group-text"><strong>VNĐ</strong></div>
+	                        	</div>
+	                        </div>
+	                    </div>
+				    <?php } ?>
 	                <?php if(isset($config['product'][$type]['giatreem']) && $config['product'][$type]['giatreem'] == true) { ?>
 				    	<div class="form-group col-md-4">
 	                        <label class="d-block" for="giatreem">Giá trẻ em:</label>
@@ -397,22 +408,33 @@
 	                        </div>
 	                    </div>
 				    <?php } ?>
-				    <?php if(isset($config['product'][$type]['gianguoilon']) && $config['product'][$type]['gianguoilon'] == true) { ?>
+				    <?php if(isset($config['product'][$type]['giaembe']) && $config['product'][$type]['giaembe'] == true) { ?>
 				    	<div class="form-group col-md-4">
-	                        <label class="d-block" for="gianguoilon">Giá người lớn:</label>
+	                        <label class="d-block" for="giaembe">Giá em bé:</label>
 	                        <div class="input-group">
-	                        	<input type="text" class="form-control format-price" name="data[gianguoilon]" id="gianguoilon" placeholder="Giá người lớn" value="<?=@$item['gianguoilon']?>">
+	                        	<input type="text" class="form-control format-price" name="data[giaembe]" id="giaembe" placeholder="Giá em bé" value="<?=@$item['giaembe']?>">
 	                        	<div class="input-group-append">
 	                        		<div class="input-group-text"><strong>VNĐ</strong></div>
 	                        	</div>
 	                        </div>
 	                    </div>
 				    <?php } ?>
-				    <?php if(isset($config['product'][$type]['giaembe']) && $config['product'][$type]['giaembe'] == true) { ?>
+				    <?php if(isset($config['product'][$type]['phuthuphongdon']) && $config['product'][$type]['phuthuphongdon'] == true) { ?>
 				    	<div class="form-group col-md-4">
-	                        <label class="d-block" for="giaembe">Giá em bé:</label>
+	                        <label class="d-block" for="phuthuphongdon">Phụ thu phòng dọn:</label>
 	                        <div class="input-group">
-	                        	<input type="text" class="form-control format-price" name="data[giaembe]" id="giaembe" placeholder="Giá em bé" value="<?=@$item['giaembe']?>">
+	                        	<input type="text" class="form-control format-price" name="data[phuthuphongdon]" id="phuthuphongdon" placeholder="Phụ thu phòng dọn" value="<?=@$item['phuthuphongdon']?>">
+	                        	<div class="input-group-append">
+	                        		<div class="input-group-text"><strong>VNĐ</strong></div>
+	                        	</div>
+	                        </div>
+	                    </div>
+				    <?php } ?>
+				    <?php if(isset($config['product'][$type]['chiphikhac']) && $config['product'][$type]['chiphikhac'] == true) { ?>
+				    	<div class="form-group col-md-4">
+	                        <label class="d-block" for="chiphikhac">Chi phí khác:</label>
+	                        <div class="input-group">
+	                        	<input type="text" class="form-control format-price" name="data[chiphikhac]" id="chiphikhac" placeholder="Chi phí khác" value="<?=@$item['chiphikhac']?>">
 	                        	<div class="input-group-append">
 	                        		<div class="input-group-text"><strong>VNĐ</strong></div>
 	                        	</div>

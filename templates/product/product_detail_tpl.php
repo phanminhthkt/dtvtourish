@@ -74,6 +74,9 @@
                                     </div>
                                 </li>
                             </ul>
+                            <div class="cart-pro-detail">
+                                <a class="transition buynow addcart text-decoration-none" href="dat-tour?id=<?=$row_detail['id']?>"><i class="fas fa-shopping-bag"></i><span><?=dattour?></span></a>
+                            </div>
                         </div>
                     </div>
                 </div>

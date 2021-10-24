@@ -81,7 +81,12 @@
             </li>
              <li><a class="transition text-menu <?php if($com=='tuyen-dung') echo 'active'; ?>" href="tuyen-dung" title="<?=tuyendung?>"><?=tuyendung?></a></li>
             <li><a class="transition text-menu <?php if($com=='lien-he') echo 'active'; ?>" href="lien-he" title="<?=lienhe?>"><?=lienhe?></a></li>
+            <div class="clear"></div>
         </ul>
+        <div class="lang-header">
+            <a href="ngon-ngu/vi/"><img src="assets/images/vi.jpg" alt="Tiếng Việt"></a>
+            <a href="ngon-ngu/en/"><img src="assets/images/en.jpg" alt="Tiếng Anh"></a>
+        </div>
         <div class="clear"></div>
     </div>
 </div>

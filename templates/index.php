@@ -10,7 +10,7 @@
         // include TEMPLATE.LAYOUT."loading.php"; 
         include TEMPLATE.LAYOUT."header.php"; 
         include TEMPLATE.LAYOUT."menu.php";               
-        include TEMPLATE.LAYOUT."mmenu.php";                
+                      
         include TEMPLATE.LAYOUT."slide.php";
         if($source!=='index')  include TEMPLATE.LAYOUT."breadcrumb.php";
     ?>

@@ -506,7 +506,21 @@
                         </a>
                     </li>
                 <?php } ?>
-
+                <!-- Cart -->
+                <?php if(isset($config['booktour']['active']) && $config['booktour']['active'] == true) { ?>
+                    <?php
+                        $none = "";
+                        $active = "";
+                        if(isset($kiemtra) && $kiemtra == true) if($func->check_access('booktour', 'man', '', null, 'phrase-1')) $none = "d-none";
+                        if($com=='booktour') $active = 'active';
+                    ?>
+                    <li class="nav-item <?=$active?> <?=$none?>">
+                        <a class="nav-link <?=$active?>" href="index.php?com=booktour&act=man" title="Quản lý đặt tour">
+                            <i class="nav-icon text-sm fas fa-shopping-bag"></i>
+                            <p>Quản lý đặt tour</p>
+                        </a>
+                    </li>
+                <?php } ?>
                 <!-- Tags -->
                 <?php if(isset($config['tags'])) { ?>
                     <?php

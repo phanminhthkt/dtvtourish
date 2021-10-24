@@ -28,7 +28,7 @@
 			'charset' => 'utf8'
 		),
 		'website' => array(
-			'error-reporting' => true,
+			'error-reporting' => false,
 			'secret' => '$dt@',
 			'salt' => 'dtvtourist',
 			'debug-developer' => false,
@@ -89,6 +89,8 @@
 			'powered' => "phuctai.nina@gmail.com"
 		)
 	);
+
+	
 	/* Error reporting */
 	error_reporting(($config['website']['error-reporting']) ? E_ALL : 0);
 	/* Cấu hình base */
